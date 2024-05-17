@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Gang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Startseite mit Hintergrundbild -->
+    <div class="background" id="background">
+        <!-- Großer Button "Die Gang" -->
+        <button id="mainButton" class="main-button" onclick="showButtons()">Die Gang</button>
+        
+        <!-- Container für die Freundes-Buttons und Namen -->
+        <div id="friendsContainer" class="friends-container" style="display:none;">
+            <!-- Buttons mit Bildern der Freunde -->
+            <div class="friends-list">
+                <div class="friend-item" onclick="showProfile(0)">
+                    <button class="friend-button">
+                        <img src="ismail.jpg" alt="Ismail">
+                    </button>
+                    <button class="name-button" onclick="showProfile(0)">Ismail</button>
+                </div>
+                <div class="friend-item" onclick="showProfile(1)">
+                    <button class="friend-button">
+                        <img src="abdul.jpg" alt="Abdul">
+                    </button>
+                    <button class="name-button" onclick="showProfile(1)">Abdul</button>
+                </div>
+                <div class="friend-item" onclick="showProfile(2)">
+                    <button class="friend-button">
+                        <img src="kidus.jpg" alt="Kidus">
+                    </button>
+                    <button class="name-button" onclick="showProfile(2)">Kidus</button>
+                </div>
+                <div class="friend-item" onclick="showProfile(3)">
+                    <button class="friend-button">
+                        <img src="alemdar.jpg" alt="Alemdar">
+                    </button>
+                    <button class="name-button" onclick="showProfile(3)">Alemdar</button>
+                </div>
+                <div class="friend-item" onclick="showProfile(4)">
+                    <button class="friend-button">
+                        <img src="hassan.jpg" alt="Hassan">
+                    </button>
+                    <button class="name-button" onclick="showProfile(4)">Hassan</button>
+                </div>
+                <div class="friend-item action-button-container">
+                    <button class="action-button" onclick="showActions()">Gemeinsame Aktionen</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Profilanzeige -->
+        <div id="profileContainer" class="profile-container" style="display:none;">
+            <button class="back-button" onclick="goBack()">Zurück</button>
+            <h1 id="profileName"></h1>
+            <div class="profile-content">
+                <img id="profileImage" src="" alt="Profilbild">
+                <div id="profileDetails" class="profile-details">
+                    <p>Alter: <span id="profileAge"></span></p>
+                    <p>Hobby: <span id="profileHobby"></span></p>
+                    <p>Beruf: <span id="profileJob"></span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Videoanzeige -->
+        <div id="actionsContainer" class="actions-container" style="display:none;">
+            <button class="back-button" onclick="goBack()">Zurück</button>
+            <h1>Überfall auf Kidus</h1>
+            <video controls>
+                <source src="videos/aktionsvideo.mp4" type="video/mp4">
+                Dein Browser unterstützt das Video-Tag nicht.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
